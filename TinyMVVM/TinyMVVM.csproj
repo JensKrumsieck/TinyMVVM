@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PackageId>TinyMVVM</PackageId>
     <Authors>Jens Krumsieck</Authors>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Version>1.0.0-alpha20210104</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

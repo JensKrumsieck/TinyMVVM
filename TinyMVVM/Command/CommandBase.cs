@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace TinyMVVM
+namespace TinyMVVM.Command
 {
     public abstract class CommandBase : ICommand
     {

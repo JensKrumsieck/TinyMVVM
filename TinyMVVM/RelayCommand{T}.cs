@@ -2,7 +2,7 @@
 
 namespace TinyMVVM
 {
-    class RelayCommand<T> : CommandBase
+    public class RelayCommand<T> : CommandBase
     {
         private readonly Action<T> _execute;
         private readonly Func<T, bool> _canExecute;

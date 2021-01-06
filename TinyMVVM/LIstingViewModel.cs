@@ -45,11 +45,10 @@ namespace TinyMVVM
         protected ListingViewModel()
         {
             var type = GetType();
-            var method = type.GetMethods(BindingFlags.Public | BindingFlags.Instance)
+            var method = type.GetMethods(BindingFlags.Public|BindingFlags.Instance)
                 .FirstOrDefault(s => Attribute.IsDefined(s, typeof(DeleteCommandAttribute)));
-            //if (method != null)
-            var action = (Action<T>)Delegate.CreateDelegate(typeof(Action<T>), this, method);
-            DeleteItemCommand = new RelayCommand<T>(action);
+            if (method != null)
+                DeleteItemCommand = new RelayCommand<T>((Action<T>)Delegate.CreateDelegate(typeof(Action<T>), this, method));
         }
     }
 }

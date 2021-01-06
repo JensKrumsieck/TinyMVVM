@@ -29,6 +29,6 @@ namespace TinyMVVM.Command
         protected override void Execute(object parameter) => _execute();
 
         /// <inheritdoc/>
-        protected override bool CanExecute(object parameter) =>  _canExecute();
+        protected override bool CanExecute(object parameter) => _canExecute();
     }
 }

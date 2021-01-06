@@ -8,14 +8,14 @@ namespace TinyMVVM.Test
         [TestMethod]
         public void TestSetter()
         {
-            var instance = new Bindable {Property = "Hello World"};
+            var instance = new Bindable { Property = "Hello World" };
             Assert.AreEqual("Hello World", instance.Property);
         }
 
         [TestMethod]
         public void TestWithAction()
         {
-            var instance = new Bindable {WithAction = "Hello World"};
+            var instance = new Bindable { WithAction = "Hello World" };
             Assert.AreEqual("Hello World", instance.WithAction);
             Assert.AreEqual("True", instance.Property);
         }

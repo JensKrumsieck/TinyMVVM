@@ -33,7 +33,7 @@ namespace TinyMVVM
         /// Gets the SelectedItem
         /// </summary>
         public T SelectedItem => Items.Any() ? Items[SelectedIndex] : null;
-        
+
         /// <summary>
         /// DeleteCommand
         /// </summary>
@@ -48,8 +48,8 @@ namespace TinyMVVM
             var method = type.GetMethods(BindingFlags.Public | BindingFlags.Instance)
                 .FirstOrDefault(s => Attribute.IsDefined(s, typeof(DeleteCommandAttribute)));
             //if (method != null)
-            var action = (Action<T>) Delegate.CreateDelegate(typeof(Action<T>), this, method);
-                DeleteItemCommand = new RelayCommand<T>(action);
+            var action = (Action<T>)Delegate.CreateDelegate(typeof(Action<T>), this, method);
+            DeleteItemCommand = new RelayCommand<T>(action);
         }
     }
 }

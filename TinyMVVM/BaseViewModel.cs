@@ -28,11 +28,13 @@ namespace TinyMVVM
         /// <param name="target"></param>
         /// <param name="addToTarget"></param>
         /// <param name="removeFromTarget"></param>
-        public void Subscribe<TSource, TTarget>(ObservableCollection<TSource> source, IList<TTarget> target, 
-            Func<TSource,TTarget> addToTarget, Func<TSource, TTarget>? removeFromTarget = null)
+        /// <param name="cleanUpFunction"></param>
+        public void Subscribe<TSource, TTarget>(ObservableCollection<TSource> source, IList<TTarget> target,
+            Func<TSource, TTarget> addToTarget, Func<TSource, TTarget>? removeFromTarget = null, Action? cleanUpFunction = null)
         {
             //allow both to be the same
             removeFromTarget ??= addToTarget;
+
 
             source.CollectionChanged += (s, e) =>
             {
@@ -43,16 +45,23 @@ namespace TinyMVVM
                             target.Add(addToTarget(item));
                         break;
                     case NotifyCollectionChangedAction.Remove:
-                        foreach (TSource item in e.OldItems) 
+                        foreach (TSource item in e.OldItems)
                             target.Remove(removeFromTarget(item));
                         break;
                     default: return;
                 }
+                cleanUpFunction?.Invoke();
             };
         }
 
-        
-        
+        /// <summary>
+        /// No need for converters if type matches
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <param name="cleanUpFunction"></param>
+        public void Subscribe<T>(ObservableCollection<T> source, IList<T> target, Action? cleanUpFunction = null) => Subscribe(source, target, s => s, null, cleanUpFunction);
     }
 }
 #nullable restore

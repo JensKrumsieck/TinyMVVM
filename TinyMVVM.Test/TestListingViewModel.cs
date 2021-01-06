@@ -1,5 +1,4 @@
-﻿using System.Data;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TinyMVVM.Test
 {

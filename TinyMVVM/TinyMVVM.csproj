@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>TinyMVVM</PackageId>
+    <PackageId>JensKrumsieck.TinyMVVM</PackageId>
     <Authors>Jens Krumsieck</Authors>
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>

@@ -32,7 +32,7 @@ namespace TinyMVVM
         /// <summary>
         /// Gets the SelectedItem
         /// </summary>
-        public T SelectedItem => Items.Any() ? Items[SelectedIndex] : null;
+        public T SelectedItem => Items.ElementAtOrDefault(SelectedIndex);
 
         /// <summary>
         /// DeleteCommand

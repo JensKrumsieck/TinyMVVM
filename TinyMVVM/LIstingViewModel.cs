@@ -59,6 +59,10 @@ namespace TinyMVVM
         /// <summary>
         /// Selected index changed handler
         /// </summary>
-        protected virtual void OnSelectedIndexChanged() => SelectedIndexChanged?.Invoke(this, new EventArgs());
+        protected virtual void OnSelectedIndexChanged()
+        {
+            SelectedIndexChanged?.Invoke(this, new EventArgs());
+            OnPropertyChanged(nameof(SelectedItem));
+        }
     }
 }

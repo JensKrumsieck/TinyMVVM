@@ -18,8 +18,7 @@ namespace TinyMVVM
         /// </summary>
         public ObservableCollection<T> Items { get; set; } = new ObservableCollection<T>();
 
-        private int _selectedIndex;
-
+        private int _selectedIndex = -1;
         /// <summary>
         /// Gets or Sets the selectedIndex
         /// </summary>

@@ -25,6 +25,22 @@ namespace TinyMVVM.Test
             Assert.AreEqual(0, vm.Items.Count);
         }
 
+        [TestMethod]
+        public void TestSelectedIndex()
+        {
+            var vm = new ListModel();
+            vm.Items.Add(new TestObj("Hello World"));
+            vm.SelectedIndex = -1;
+            var fired = false;
+            vm.SelectedIndexChanged += (sender, args) =>
+            {
+                fired = true;
+            };
+            Assert.IsFalse(fired);
+            vm.SelectedIndex = 0;
+            Assert.IsTrue(fired);
+        }
+
     }
 
     internal class ListModel : ListingViewModel<TestObj>

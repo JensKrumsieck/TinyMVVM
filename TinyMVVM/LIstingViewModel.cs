@@ -26,7 +26,7 @@ namespace TinyMVVM
         public virtual int SelectedIndex
         {
             get => _selectedIndex;
-            set => Set(ref _selectedIndex, value);
+            set => Set(ref _selectedIndex, value, OnSelectedIndexChanged);
         }
 
         /// <summary>
@@ -50,5 +50,15 @@ namespace TinyMVVM
             if (method != null)
                 DeleteItemCommand = new RelayCommand<T>((Action<T>)Delegate.CreateDelegate(typeof(Action<T>), this, method));
         }
+
+        /// <summary>
+        /// Fires when SelectedIndex changes
+        /// </summary>
+        public event EventHandler SelectedIndexChanged;
+
+        /// <summary>
+        /// Selected index changed handler
+        /// </summary>
+        protected virtual void OnSelectedIndexChanged() => SelectedIndexChanged?.Invoke(this, new EventArgs());
     }
 }

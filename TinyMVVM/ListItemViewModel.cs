@@ -4,7 +4,7 @@
     /// Represents a ListItem
     /// To be used with <see cref="ListingViewModel{T}"/>
     /// </summary>
-    public class ListItemViewModel<TParent, TChild> : BaseViewModel where TParent : ListingViewModel<TChild> where TChild : class
+    public class ListItemViewModel<TParent, TChild> : BaseViewModel, IListItemViewModel<TParent, TChild> where TParent : ListingViewModel<TChild> where TChild : class
     {
 
         /// <summary>

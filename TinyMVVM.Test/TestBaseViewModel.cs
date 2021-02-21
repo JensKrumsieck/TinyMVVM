@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using TinyMVVM.Utility;
 
 namespace TinyMVVM.Test
 {
@@ -19,6 +20,8 @@ namespace TinyMVVM.Test
             Assert.AreEqual(vm.SourceCollection.Count, vm.Doubles.Count);
             Assert.AreEqual(0.1, vm.Doubles[0]);
             Assert.AreEqual(0.3, vm.Doubles[1]);
+            vm.SourceCollection.ClearAndNotify();
+            Assert.AreEqual(vm.SourceCollection.Count, vm.Doubles.Count);
         }
     }
 

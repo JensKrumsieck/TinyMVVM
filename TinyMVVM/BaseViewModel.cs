@@ -35,7 +35,6 @@ namespace TinyMVVM
             //allow both to be the same
             removeFromTarget ??= addToTarget;
 
-
             source.CollectionChanged += (s, e) =>
             {
                 switch (e.Action)
@@ -47,6 +46,12 @@ namespace TinyMVVM
                     case NotifyCollectionChangedAction.Remove:
                         foreach (TSource item in e.OldItems)
                             target.Remove(removeFromTarget(item));
+                        break;
+                    case NotifyCollectionChangedAction.Replace:
+                        foreach (TSource item in e.OldItems)
+                            target.Remove(removeFromTarget(item));
+                        foreach (TSource item in e.NewItems)
+                            target.Add(addToTarget(item));
                         break;
                     default: return;
                 }

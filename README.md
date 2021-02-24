@@ -7,5 +7,5 @@ Provides the commonly used RelayCommand and a BindableBase class  as well as Vie
 [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/JensKrumsieck.TinyMVVM)](https://www.nuget.org/packages/JensKrumsieck.TinyMVVM/)
 
 ### Used by (Highlights):
-* <img src="https://raw.githubusercontent.com/JensKrumsieck/SPCViewer/chemsharp/.github/spc.png" alt="logo" height="16"/>  **[SPCViewer](https://github.com/JensKrumsieck/SPCViewer)**
 *  <img src="https://github.com/JensKrumsieck/PorphyStruct/blob/master/PorphyStruct.WPF/Resources/porphystruct.png" alt="logo" height="16"/>  **[PorphyStruct](https://github.com/JensKrumsieck/PorphyStruct)**
+* <img src="https://raw.githubusercontent.com/JensKrumsieck/SPCViewer/chemsharp/.github/spc.png" alt="logo" height="16"/>  **[SPCViewer](https://github.com/JensKrumsieck/SPCViewer)**

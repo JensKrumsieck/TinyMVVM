@@ -1,4 +1,7 @@
-﻿namespace TinyMVVM;
+﻿using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+
+namespace TinyMVVM;
 
 public abstract class BaseViewModel : BindableBase
 {

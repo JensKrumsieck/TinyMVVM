@@ -1,4 +1,9 @@
-﻿namespace TinyMVVM.Test;
+﻿using System.Collections.ObjectModel;
+using System.Globalization;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TinyMVVM.Utility;
+
+namespace TinyMVVM.Test;
 
 [TestClass]
 public class TestBaseViewModel

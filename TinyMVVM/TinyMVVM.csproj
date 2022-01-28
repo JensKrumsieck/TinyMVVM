@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/JensKrumsieck/TinyMVVM</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
-	<ImplicitUsings>true</ImplicitUsings>
+	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
   </PropertyGroup>
 </Project>

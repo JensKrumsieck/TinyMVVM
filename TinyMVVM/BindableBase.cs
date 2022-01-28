@@ -1,4 +1,7 @@
-﻿namespace TinyMVVM;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace TinyMVVM;
 
 public abstract class BindableBase : INotifyPropertyChanged
 {

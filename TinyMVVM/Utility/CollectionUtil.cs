@@ -1,4 +1,6 @@
-﻿namespace TinyMVVM.Utility;
+﻿using System.Collections.ObjectModel;
+
+namespace TinyMVVM.Utility;
 
 public static class CollectionUtil
 {

@@ -1,3 +1,5 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace TinyMVVM.Test;
 
 [TestClass]

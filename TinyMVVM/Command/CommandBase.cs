@@ -1,4 +1,6 @@
-﻿namespace TinyMVVM.Command;
+﻿using System.Windows.Input;
+
+namespace TinyMVVM.Command;
 
 public abstract class CommandBase : ICommand
 {

@@ -1,4 +1,6 @@
-﻿namespace TinyMVVM.Test;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace TinyMVVM.Test;
 
 [TestClass]
 public class TestListingViewModel

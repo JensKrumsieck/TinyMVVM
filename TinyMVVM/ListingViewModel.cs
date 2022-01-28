@@ -1,4 +1,7 @@
-﻿using TinyMVVM.Command;
+﻿using System.Collections.ObjectModel;
+using System.Reflection;
+using System.Windows.Input;
+using TinyMVVM.Command;
 
 namespace TinyMVVM;
 

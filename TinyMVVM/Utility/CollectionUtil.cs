@@ -1,14 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
+﻿namespace TinyMVVM.Utility;
 
-namespace TinyMVVM.Utility
+public static class CollectionUtil
 {
-    public static class CollectionUtil
+    public static void ClearAndNotify<T>(this ObservableCollection<T> input)
     {
-        public static void ClearAndNotify<T>(this ObservableCollection<T> input)
-        {
-            var items = input.ToList();
-            foreach (var item in items) input.Remove(item);
-        }
+        var items = input.ToList();
+        foreach (var item in items) input.Remove(item);
     }
 }

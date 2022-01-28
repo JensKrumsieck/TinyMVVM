@@ -1,29 +1,26 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿namespace TinyMVVM.Test;
 
-namespace TinyMVVM.Test
+[TestClass]
+public class ListItemViewModelTest
 {
-    [TestClass]
-    public class ListItemViewModelTest
+    [TestMethod]
+    public void TestConstruct()
     {
-        [TestMethod]
-        public void TestConstruct()
-        {
-            var list = new TheList();
-            var item = new TheItem(list);
-            Assert.AreEqual(list, item.Parent);
-        }
+        var list = new TheList();
+        var item = new TheItem(list);
+        Assert.AreEqual(list, item.Parent);
     }
+}
 
-    internal class TheList : ListingViewModel<TheItem>
+internal class TheList : ListingViewModel<TheItem>
+{
+
+}
+
+internal class TheItem : ListItemViewModel<TheList, TheItem>
+{
+    public TheItem(TheList parent) : base(parent)
     {
 
-    }
-
-    internal class TheItem : ListItemViewModel<TheList, TheItem>
-    {
-        public TheItem(TheList parent) : base(parent)
-        {
-
-        }
     }
 }

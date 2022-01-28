@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace TinyMVVM;
 
-namespace TinyMVVM
-{
-    /// <summary>
-    /// Marks the DeleteMethod in ListingViewModel
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Method)]
-    public class DeleteCommandAttribute : Attribute
-    { }
-}
+/// <summary>
+/// Marks the DeleteMethod in ListingViewModel
+/// </summary>
+[AttributeUsage(AttributeTargets.Method)]
+public class DeleteCommandAttribute : Attribute
+{ }

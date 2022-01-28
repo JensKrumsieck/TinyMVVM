@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PackageId>JensKrumsieck.TinyMVVM</PackageId>
     <Authors>Jens Krumsieck</Authors>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.1;net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Version>1.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,5 +11,7 @@
     <RepositoryUrl>https://github.com/JensKrumsieck/TinyMVVM</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
+	<ImplicitUsings>true</ImplicitUsings>
+	<Nullable>enable</Nullable>
   </PropertyGroup>
 </Project>
